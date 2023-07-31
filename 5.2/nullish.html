@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuts+ - Nullish</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Nullish</h1>
+    
+    <script>
+        function displayUser({username, profile}) {
+            const name = username ?? 'Anonymous';
+            const role = profile?.role ?? 'Unknown';
+
+            console.log(`${name} (${role})`);
+        }
+
+        
+
+        displayUser({
+            username: 'John',
+            profile: {
+                role: 'Admin'
+            }
+        });
+
+        displayUser({});
+
+
+        
+    </script>
+</body>
+</html>
